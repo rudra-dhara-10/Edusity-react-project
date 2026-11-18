@@ -8,11 +8,8 @@ import Campus from "./components/Campus/Campus";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 
 const App = () => {
-
-  const [playState, setPlayState] = useState(false)
 
   return (
     <div>
@@ -21,7 +18,7 @@ const App = () => {
       <div className="container">
         <Title subTitle='Our PROGRAM' title='What We Offer' />
         <Program />
-        <About setPlayState={setPlayState} />
+        <About />
         <Title subTitle='Gallery' title='Campus Photos' />
         <Campus />
         <Title subTitle='TESTIMONIALS' title='What Student Says' />
@@ -30,7 +27,6 @@ const App = () => {
         <Contact />
         <Footer />
       </div>
-      <VideoPlayer playState={playState} setPlayState={setPlayState} />
     </div>
   );
 };
